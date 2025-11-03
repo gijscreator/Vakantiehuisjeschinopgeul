@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: sans-serif;
 }
 
 header {
@@ -37,5 +38,24 @@ header {
         img {
             width: 50%;
         }
-    }
+
+        .button {
+            background-color: rgb(3, 82, 0);
+            color: white;
+            text-decoration: none;
+            padding: 10% 20%;
+            border-radius: 25px;
+            transform: scale(1);
+            transition-duration: 1s;
+
+            &:hover {
+                transform: scale(1.05);
+                transition-duration: 1s;
+            }
+        }    
+    }  
+}
+
+main {
+
 }
