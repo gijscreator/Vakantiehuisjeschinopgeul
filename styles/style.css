@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header {
+    background-color: #F2F1ED;
+    width: 100vw;
+    height: auto;
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+}
+
+img {
+    width: 50%;
+}
+
+}
