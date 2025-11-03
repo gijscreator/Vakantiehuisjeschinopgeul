@@ -9,15 +9,18 @@ header {
     width: 100vw;
     height: auto;
 
-ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vw;
-}
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw;
+    }
 
-img {
-    width: 50%;
-}
+    li {
 
+    }
+    
+    img {
+        width: 50%;
+    }
 }
