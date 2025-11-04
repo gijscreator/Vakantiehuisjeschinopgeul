@@ -5,12 +5,19 @@
     font-family: sans-serif;
 }
 
+
+
+img, video {
+    width: 100%;
+    height: auto;
+}
+
 .button {
-    background-color: rgb(3, 82, 0);
+    background-color: rgb(53, 141, 218);
     color: white;
     text-decoration: none;
-    padding: 10% 20%;
-    border-radius: 25px;
+    padding: 20px 30px;
+    border-radius: 15px;
     transform: scale(1);
     transition-duration: 1s;
 
@@ -52,6 +59,7 @@ header {
 
         img {
             width: 50%;
+            max-width: 150px;
         }
     }    
 }  
@@ -63,27 +71,48 @@ main {
         width: 100vw;
         height: auto;
         opacity: .4;
+
+        @media (min-width: 1000px) {
+            width: 50vw;
+            opacity: 1;
+        }
     }
 
     .banner {
         position: relative;
         background-color: black;
+
+        @media (min-width: 1000px) {
+            position: static;
+            width: 50vw;
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr 1fr;
+
+        }
     }
+
     .banner-text {
         position: absolute;
         left: 10vw;
         top: 20vw;
         color: white;
+
+        @media (min-width: 1000px) {
+            position: static;
+            color: black;
+            width: 50vw;
+        }
     }
 
     a.button-inline {
 
         display: inline-block;
-        background-color: rgb(3, 82, 0);
+        background-color: rgb(53, 141, 218);
         color: white;
         text-decoration: none;
-        padding: 5% 15%;
-        border-radius: 25px;
+        padding: 20px 40px;
+        border-radius: 15px;
         transform: scale(1);
         transition-duration: 1s;
 
@@ -97,5 +126,12 @@ main {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @media (min-width: 1000px) {
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            align-items: center;
+        }
     }
 }
