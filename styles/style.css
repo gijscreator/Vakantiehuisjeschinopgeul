@@ -5,6 +5,21 @@
     font-family: sans-serif;
 }
 
+.button {
+    background-color: rgb(3, 82, 0);
+    color: white;
+    text-decoration: none;
+    padding: 10% 20%;
+    border-radius: 25px;
+    transform: scale(1);
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(1.05);
+        transition-duration: 1s;
+    }
+}
+
 header {
     background-color: #F2F1ED;
     padding: 10px 0px;
@@ -38,24 +53,49 @@ header {
         img {
             width: 50%;
         }
+    }    
+}  
 
-        .button {
-            background-color: rgb(3, 82, 0);
-            color: white;
-            text-decoration: none;
-            padding: 10% 20%;
-            border-radius: 25px;
-            transform: scale(1);
-            transition-duration: 1s;
-
-            &:hover {
-                transform: scale(1.05);
-                transition-duration: 1s;
-            }
-        }    
-    }  
-}
 
 main {
 
+    .underlay-img {
+        width: 100vw;
+        height: auto;
+        opacity: .4;
+    }
+
+    .banner {
+        position: relative;
+        background-color: black;
+    }
+    .banner-text {
+        position: absolute;
+        left: 10vw;
+        top: 20vw;
+        color: white;
+    }
+
+    a.button-inline {
+
+        display: inline-block;
+        background-color: rgb(3, 82, 0);
+        color: white;
+        text-decoration: none;
+        padding: 5% 15%;
+        border-radius: 25px;
+        transform: scale(1);
+        transition-duration: 1s;
+
+        &:hover {
+            transform: scale(1.05);
+            transition-duration: 1s;
+        }
+    }
+
+    .text-banner-gaps {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
