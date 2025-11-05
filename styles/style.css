@@ -4,54 +4,62 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: "Roboto", sans-serif;
-    box-sizing: border-box;
+    font-family: "Roboto"
 }
+
+
 
 img, video {
     width: 100%;
     height: auto;
 }
 
-/* --- BUTTONS --- */
-.button, a.button-inline {
+.button {
     background-color: rgb(53, 141, 218);
     color: white;
     text-decoration: none;
     padding: 20px 30px;
     border-radius: 15px;
     transform: scale(1);
-    transition: transform 0.5s ease;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    transition-duration: 1s;
+    text-transform: none;
+
+    &:hover {
+        transform: scale(1.05);
+        transition-duration: 1s;
+    }
 }
 
-.button:hover,
-a.button-inline:hover {
-    transform: scale(1.05);
-}
-
-/* --- HEADER --- */
 header {
-    position: absolute;     
-    top: 0;
-    left: 0;
-    width: 100%;
     background-color: transparent;
-    padding: 20px 0;
-    z-index: 10;             
+    padding: 10px 0px;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    z-index: 2;
 
     nav {
         margin: 0 auto;
-        width: 90%;
-        max-width: 1200px;
+        width: 90vw;
 
         ul {
             display: flex;
-            justify-content: space-between;
+
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
             align-items: center;
+            width: 50%;
+
+            &:nth-of-type(1) {
+                justify-content: flex-start;
+            }
+
+            &:nth-of-type(2) {
+                justify-content: flex-end;
+            }
         }
 
         img {
@@ -61,89 +69,82 @@ header {
     }    
 }  
 
-/* --- MAIN --- */
+
 main {
-    position: relative;
-    text-align: center;
 
     .underlay-img {
         width: 100vw;
         height: 100vh;
         opacity: .4;
         object-fit: cover;
-        position: absolute;  
-        top: 0;
-        left: 0;
-        z-index: 1;
     }
 
     .banner {
         position: relative;
         background-color: black;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        z-index: 2;         
     }
 
     .banner-text {
-        position: relative;
+        position: absolute;
+        top: 20%;
+        font-size: 1rem;
         color: white;
-        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        z-index: 3;      
-        max-width: 80vw;
-        margin: 0 auto;
 
         h1 {
             text-transform: uppercase;
-            font-size: 4rem;
-            line-height: 1.1;
-        }
-
-        p {
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size:4rem;
         }
     }
 
     a.button-inline {
-        margin-top: 20px;
-        max-width: 300px;
+
+        display: flex;
+        justify-content: center;
+        background-color: rgb(53, 141, 218);
+        color: white;
+        text-decoration: none;
+        max-width: 400px;
+        padding: 20px 40px;
+        border-radius: 15px;
+        transform: scale(1);
+        transition-duration: 1s;
+
+        &:hover {
+            transform: scale(1.05);
+            transition-duration: 1s;
+        }
+    }
+
+    .text-banner-gaps {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .transparent-banner {
+        position: absolute;
+        top: 0;
+        z-index: 1;
     }
 
     .usp-list {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 40px auto;
-        background-color: rgba(0, 0, 0, 0.6);
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.571);
+        margin-top: 20px;
         width: 80vw;
-        max-width: 1000px;
-        padding: 40px 20px;
-        border-radius: 15px;
-        color: white;
+        padding: 20px;
 
         ul {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            align-items: center;
-            text-align: center;
         }
 
         li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-
             svg {
                 width: 45px;
                 height: auto;
@@ -153,5 +154,7 @@ main {
                 }
             }
         }
+
     }
+
 }
