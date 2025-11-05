@@ -82,27 +82,14 @@ main {
     .banner {
         position: relative;
         background-color: black;
-
-        /* @media (min-width: 1000px) {
-            position: static;
-            width: 50vw;
-            display: grid;
-            place-items: center;
-            grid-template-columns: 1fr 1fr;
-
-        } */
     }
 
     .banner-text {
         position: absolute;
+        top: 20%;
         left: 5vw;
-        top: 30%;
         font-size: 1rem;
         color: white;
-
-        @media (min-width: 1000px) {
-        font-size: 4rem;
-        }
 
         h1 {
             text-transform: uppercase;
@@ -110,12 +97,20 @@ main {
         }
     }
 
+    ul {
+        li {
+            width: 90vw;
+        }
+    }
+
     a.button-inline {
 
-        display: inline-block;
+        display: flex;
+        justify-content: center;
         background-color: rgb(53, 141, 218);
         color: white;
         text-decoration: none;
+        max-width: 400px;
         padding: 20px 40px;
         border-radius: 15px;
         transform: scale(1);
@@ -131,13 +126,6 @@ main {
         display: flex;
         flex-direction: column;
         gap: 20px;
-
-        /* @media (min-width: 1000px) {
-            display: flex;
-            justify-content: center;
-            place-items: center;
-            align-items: center;
-        } */
     }
 
     .transparent-banner {
