@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: sans-serif;
+    font-family: "Roboto"
 }
 
 
@@ -20,6 +22,7 @@ img, video {
     border-radius: 15px;
     transform: scale(1);
     transition-duration: 1s;
+    text-transform: none;
 
     &:hover {
         transform: scale(1.05);
@@ -28,10 +31,12 @@ img, video {
 }
 
 header {
-    background-color: #F2F1ED;
+    background-color: transparent;
     padding: 10px 0px;
     width: 100vw;
     height: auto;
+    position: relative;
+    z-index: 2;
 
     nav {
         margin: 0 auto;
@@ -58,8 +63,8 @@ header {
         }
 
         img {
-            width: 50%;
-            max-width: 150px;
+            width: 100%;
+            max-width: 250px;
         }
     }    
 }  
@@ -69,39 +74,39 @@ main {
 
     .underlay-img {
         width: 100vw;
-        height: auto;
+        height: 100vh;
         opacity: .4;
-
-        @media (min-width: 1000px) {
-            width: 50vw;
-            opacity: 1;
-        }
+        object-fit: cover;
     }
 
     .banner {
         position: relative;
         background-color: black;
 
-        @media (min-width: 1000px) {
+        /* @media (min-width: 1000px) {
             position: static;
             width: 50vw;
             display: grid;
             place-items: center;
             grid-template-columns: 1fr 1fr;
 
-        }
+        } */
     }
 
     .banner-text {
         position: absolute;
         left: 5vw;
-        top: 20vw;
+        top: 30%;
+        font-size: 1rem;
         color: white;
 
         @media (min-width: 1000px) {
-            position: static;
-            color: black;
-            width: 50vw;
+        font-size: 4rem;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size:4rem;
         }
     }
 
@@ -127,11 +132,17 @@ main {
         flex-direction: column;
         gap: 20px;
 
-        @media (min-width: 1000px) {
+        /* @media (min-width: 1000px) {
             display: flex;
             justify-content: center;
             place-items: center;
             align-items: center;
-        }
+        } */
+    }
+
+    .transparent-banner {
+        position: absolute;
+        top: 0;
+        z-index: 1;
     }
 }
