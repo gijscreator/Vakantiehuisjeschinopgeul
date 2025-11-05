@@ -97,12 +97,6 @@ main {
         }
     }
 
-    ul {
-        li {
-            width: 90vw;
-        }
-    }
-
     a.button-inline {
 
         display: flex;
@@ -133,4 +127,33 @@ main {
         top: 0;
         z-index: 1;
     }
+
+    .usp-list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.571);
+        margin-top: 20px;
+        width: 80vw;
+        padding: 20px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        li {
+            svg {
+                width: 45px;
+                height: auto;
+
+                path {
+                    fill: white;
+                }
+            }
+        }
+
+    }
+
 }
