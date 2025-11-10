@@ -91,6 +91,7 @@ main {
         color: white;
         display: flex;
         flex-direction: column;
+        width: 100vw;
 
         h1 {
             text-transform: uppercase;
@@ -121,6 +122,8 @@ main {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        width: 80vw;
+        place-self: center;
     }
 
     .transparent-banner {
