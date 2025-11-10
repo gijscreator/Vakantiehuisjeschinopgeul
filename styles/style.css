@@ -4,10 +4,34 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: "Roboto"
+    font-family: var(--font-primary);
 }
 
+:root {
+    /* font-roboto */
+    --font-primary: "Roboto";
 
+    /* font-size */
+    --small-font: .8rem;
+    --general-font: 1rem;
+    --medium-font: 1.5rem;
+    --large-font: 2rem;
+    --heading-font: 4rem;
+
+    /* border-radius: */
+    --border-button: 25px;
+    --border-floating-section: 25px;
+    --border-image: 10px;
+
+    /* colors */
+    --overlay-text: white;
+    --normal-text: black;
+    --button-background: rgb(53, 141, 218);
+    --link-color: rgb(53, 141, 218);
+    --overlay-icon: white;
+    --normal-icon: black;
+    
+}
 
 img, video {
     width: 100%;
@@ -18,8 +42,9 @@ img, video {
     background-color: rgb(53, 141, 218);
     color: white;
     text-decoration: none;
+    font-size: var(--general-font);
     padding: 20px 30px;
-    border-radius: 15px;
+    border-radius: var(--border-button);
     transform: scale(1);
     transition-duration: 1s;
     text-transform: none;
@@ -32,6 +57,7 @@ img, video {
 
 header {
     background-color: transparent;
+    font-size: var(--general-font);
     padding: 10px 0px;
     width: 100vw;
     height: auto;
@@ -87,7 +113,7 @@ main {
     .banner-text {
         position: absolute;
         top: 20%;
-        font-size: 1rem;
+        font-size: var(--general-font);
         color: white;
         display: flex;
         flex-direction: column;
@@ -95,7 +121,7 @@ main {
 
         h1 {
             text-transform: uppercase;
-            font-size:4rem;
+            font-size: var(--heading-font);
         }
     }
 
@@ -108,7 +134,7 @@ main {
         text-decoration: none;
         max-width: 400px;
         padding: 20px 40px;
-        border-radius: 15px;
+        border-radius: var(--border-button);
         transform: scale(1);
         transition-duration: 1s;
 
@@ -137,7 +163,9 @@ main {
         flex-direction: column;
         margin: 0 auto;
         background-color: rgba(0, 0, 0, 0.571);
+        border-radius: var(--border-floating-section);
         margin-top: 20px;
+        
         width: 80vw;
         padding: 20px;
 
